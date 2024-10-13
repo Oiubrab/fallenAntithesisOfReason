@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=3 uid="uid://cbu5jbn1p4i50"]
+
+[ext_resource type="PackedScene" uid="uid://bd8b7if2ibaw6" path="res://character.tscn" id="1_0rx4w"]
+[ext_resource type="Script" path="res://main.gd" id="1_5bfp1"]
+[ext_resource type="PackedScene" uid="uid://bh2lqwtxil2un" path="res://maurauder.tscn" id="2_fpm6u"]
+[ext_resource type="Texture2D" uid="uid://3yk3mmnjni2j" path="res://DALL·E 2024-10-04 00.11.05 - A sci-fi style wall that can be used as a boundary in a game. The wall has a sleek, futuristic design with metallic panels, glowing neon strips, and t.webp" id="4_5ylrw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5rnu0"]
+size = Vector2(20, 647)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qwlrw"]
+size = Vector2(1153, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oiet6"]
+size = Vector2(20, 648)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u3rje"]
+size = Vector2(1152, 20)
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_5bfp1")
+
+[node name="char" parent="." groups=["player"] instance=ExtResource("1_0rx4w")]
+position = Vector2(358, 421)
+collision_layer = 3
+collision_mask = 3
+
+[node name="maurauder" parent="." instance=ExtResource("2_fpm6u")]
+position = Vector2(737, 412)
+collision_layer = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, 323)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_5rnu0")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(2.38419e-07, 1)
+scale = Vector2(0.222222, 1.23429)
+texture = ExtResource("4_5ylrw")
+region_enabled = true
+region_rect = Rect2(503.947, 181.846, 90.1886, 525.026)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(462, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(113.5, 0)
+shape = SubResource("RectangleShape2D_qwlrw")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(114, -1)
+scale = Vector2(1.12171, 0.578947)
+texture = ExtResource("4_5ylrw")
+region_enabled = true
+region_rect = Rect2(2.09503, 769.929, 1027.53, 38.599)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(1152, 324)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource("RectangleShape2D_oiet6")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3"]
+position = Vector2(-1.72853e-05, -2.67029e-05)
+scale = Vector2(0.25974, 0.713656)
+texture = ExtResource("4_5ylrw")
+region_enabled = true
+region_rect = Rect2(305.854, 30.4578, 77.3045, 908.328)
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(576, 648)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+shape = SubResource("RectangleShape2D_u3rje")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4"]
+position = Vector2(2.28882e-05, 0.500002)
+scale = Vector2(1.1261, 0.235955)
+texture = ExtResource("4_5ylrw")
+region_enabled = true
+region_rect = Rect2(1.73474, 849.255, 1023.41, 89.3101)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.009
+anchor_top = 0.015
+anchor_right = 0.065
+anchor_bottom = 0.083
+offset_left = -0.368001
+offset_top = 0.28
+offset_right = -24.88
+offset_bottom = -20.784
+text = "Health: 5"

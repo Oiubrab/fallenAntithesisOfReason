@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://cei6diswboghn"]
+
+[ext_resource type="Script" path="res://game_over.gd" id="1_byhfm"]
+
+[node name="gameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_byhfm")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 348.0
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="restart" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.053
+anchor_top = 0.77
+anchor_right = 0.5
+anchor_bottom = 0.945
+offset_left = 129.944
+offset_top = 14.04
+offset_right = -224.0
+offset_bottom = -23.3601
+text = "Restart"
+
+[node name="quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.749
+anchor_right = 0.965
+anchor_bottom = 0.968
+offset_left = 189.0
+offset_top = 27.648
+offset_right = -204.68
+offset_bottom = -38.264
+text = "Quit"
+
+[connection signal="pressed" from="restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
