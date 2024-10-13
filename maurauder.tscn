@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bh2lqwtxil2un"]
+[gd_scene load_steps=3 format=3 uid="uid://bh2lqwtxil2un"]
 
 [ext_resource type="Script" path="res://maurauder.gd" id="1_i5c7e"]
 [ext_resource type="Texture2D" uid="uid://dg7vdhhy8a278" path="res://a94364b8-4a5b-463f-bea8-b5704e98a03c.jpg" id="2_hskhj"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nddh7"]
-size = Vector2(88, 120)
 
 [node name="maurauder" type="CharacterBody2D"]
 script = ExtResource("1_i5c7e")
@@ -16,5 +13,5 @@ texture = ExtResource("2_hskhj")
 region_enabled = true
 region_rect = Rect2(85.0906, 10.545, 351.818, 501.455)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_nddh7")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-43, 58, -44, 41, -42, 14, -34, -2, -39, -11, -36, -20, -30, -26, -20, -29, -16, -42, -11, -55, -2, -59, 7, -57, 14, -46, 18, -30, 22, -27, 29, -25, 34, -18, 36, -10, 34, 1, 35, 10, 40, 10, 43, 26, 43, 47, 39, 60, 1, 60, 0, 55, -3, 60, -33, 60)

@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bop7bqk3iqp3l"]
+[gd_scene load_steps=3 format=3 uid="uid://bop7bqk3iqp3l"]
 
 [ext_resource type="Script" path="res://patrol.gd" id="1_6thn8"]
 [ext_resource type="Texture2D" uid="uid://bjmfj74mlg1bo" path="res://e53c26a5-2ba0-49ba-b180-c3fe3c1fffcf.jpg" id="1_xhxjl"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cyek0"]
-size = Vector2(54, 71)
 
 [node name="patrol" type="CharacterBody2D"]
 position = Vector2(559, 113)
@@ -17,5 +14,5 @@ texture = ExtResource("1_xhxjl")
 region_enabled = true
 region_rect = Rect2(128, 6, 384, 506)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_cyek0")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-23, 34, -20, 22, -20, 17, -26, 13, -26, 6, -22, -1, -17, -6, -19, -14, -17, -19, -16, -28, -13, -34, -5, -35, 0, -32, 6, -20, 9, -13, 16, -9, 23, 3, 26, 14, 27, 19, 27, 34, 21, 32, 17, 20, 11, 10, 4, 21, 15, 35)

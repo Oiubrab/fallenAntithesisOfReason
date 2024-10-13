@@ -1,22 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://bd8b7if2ibaw6"]
+[gd_scene load_steps=3 format=3 uid="uid://bd8b7if2ibaw6"]
 
 [ext_resource type="Script" path="res://char.gd" id="1_hp67h"]
 [ext_resource type="Texture2D" uid="uid://56gyk3nkej8a" path="res://40cf3328-49a3-4643-bbe4-2631d22ad0b4.jpg" id="2_om1q5"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7tke"]
-size = Vector2(76, 139)
 
 [node name="char" type="CharacterBody2D"]
 position = Vector2(270, 230)
 script = ExtResource("1_hp67h")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-9.98461, 0)
+position = Vector2(1.04904e-05, 0)
 scale = Vector2(0.307568, 0.281504)
 texture = ExtResource("2_om1q5")
 region_enabled = true
 region_rect = Rect2(119, 24, 247, 492)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-10, 0)
-shape = SubResource("RectangleShape2D_g7tke")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-9.99999, 3.8147e-06)
+scale = Vector2(3.8, 6.9)
+polygon = PackedVector2Array(-4.73685, 9.85507, -5, 8.55072, -7.36842, 7.24638, -6.05264, -4.34782, -3.68421, -4.49275, -2.63158, -7.3913, 0.263153, -9.85507, 3.6842, -10, 6.31579, -8.9855, 7.63158, -7.68116, 9.21053, -5.7971, 9.21053, -4.49275, 10, -2.75362, 11.3158, 2.31884, 12.1053, 5.65217, 12.6316, 6.66667, 11.3158, 8.11594, 11.8421, 10, 4.47368, 10.1449, 2.63158, 7.53623, 1.8421, 9.85507)
