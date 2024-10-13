@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bh2lqwtxil2un"]
 
 [ext_resource type="Script" path="res://maurauder.gd" id="1_i5c7e"]
-[ext_resource type="Texture2D" uid="uid://dg7vdhhy8a278" path="res://a94364b8-4a5b-463f-bea8-b5704e98a03c.jpg" id="2_hskhj"]
+[ext_resource type="Texture2D" uid="uid://bu5jiosuwq5x6" path="res://images/maurauder.png" id="2_fu2ra"]
 
 [node name="maurauder" type="CharacterBody2D"]
 script = ExtResource("1_i5c7e")
@@ -9,7 +9,7 @@ script = ExtResource("1_i5c7e")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 7.10543e-15)
 scale = Vector2(0.251953, 0.240234)
-texture = ExtResource("2_hskhj")
+texture = ExtResource("2_fu2ra")
 region_enabled = true
 region_rect = Rect2(85.0906, 10.545, 351.818, 501.455)
 

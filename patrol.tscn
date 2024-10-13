@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bop7bqk3iqp3l"]
 
 [ext_resource type="Script" path="res://patrol.gd" id="1_6thn8"]
-[ext_resource type="Texture2D" uid="uid://bjmfj74mlg1bo" path="res://e53c26a5-2ba0-49ba-b180-c3fe3c1fffcf.jpg" id="1_xhxjl"]
+[ext_resource type="Texture2D" uid="uid://bjw1do3wdeom1" path="res://images/patrol.png" id="2_18bdq"]
 
 [node name="patrol" type="CharacterBody2D"]
 position = Vector2(559, 113)
@@ -10,7 +10,7 @@ script = ExtResource("1_6thn8")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-5.72205e-06, -9.53674e-07)
 scale = Vector2(0.140137, 0.138355)
-texture = ExtResource("1_xhxjl")
+texture = ExtResource("2_18bdq")
 region_enabled = true
 region_rect = Rect2(128, 6, 384, 506)
 

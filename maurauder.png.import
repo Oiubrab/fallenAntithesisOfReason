@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://56gyk3nkej8a"
-path="res://.godot/imported/40cf3328-49a3-4643-bbe4-2631d22ad0b4.jpg-0b6a39800cb9597f1493a1c29797cf4f.ctex"
+uid="uid://frv467clcwg3"
+path="res://.godot/imported/maurauder.png-46241591584f4c87242cc23bd3c47c90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://40cf3328-49a3-4643-bbe4-2631d22ad0b4.jpg"
-dest_files=["res://.godot/imported/40cf3328-49a3-4643-bbe4-2631d22ad0b4.jpg-0b6a39800cb9597f1493a1c29797cf4f.ctex"]
+source_file="res://maurauder.png"
+dest_files=["res://.godot/imported/maurauder.png-46241591584f4c87242cc23bd3c47c90.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bd8b7if2ibaw6"]
 
 [ext_resource type="Script" path="res://char.gd" id="1_hp67h"]
-[ext_resource type="Texture2D" uid="uid://56gyk3nkej8a" path="res://40cf3328-49a3-4643-bbe4-2631d22ad0b4.jpg" id="2_om1q5"]
+[ext_resource type="Texture2D" uid="uid://dnqx2a8xebky8" path="res://images/character.png" id="2_8c6n8"]
 
 [node name="char" type="CharacterBody2D"]
 position = Vector2(270, 230)
@@ -10,7 +10,7 @@ script = ExtResource("1_hp67h")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1.04904e-05, 0)
 scale = Vector2(0.307568, 0.281504)
-texture = ExtResource("2_om1q5")
+texture = ExtResource("2_8c6n8")
 region_enabled = true
 region_rect = Rect2(119, 24, 247, 492)
 

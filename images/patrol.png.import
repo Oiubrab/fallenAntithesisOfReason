@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg7vdhhy8a278"
-path="res://.godot/imported/a94364b8-4a5b-463f-bea8-b5704e98a03c.jpg-29fef29a33671cadbdc36fb435ccc111.ctex"
+uid="uid://bjw1do3wdeom1"
+path="res://.godot/imported/patrol.png-244738b49bab73f3a64dcf25307fc4ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://a94364b8-4a5b-463f-bea8-b5704e98a03c.jpg"
-dest_files=["res://.godot/imported/a94364b8-4a5b-463f-bea8-b5704e98a03c.jpg-29fef29a33671cadbdc36fb435ccc111.ctex"]
+source_file="res://images/patrol.png"
+dest_files=["res://.godot/imported/patrol.png-244738b49bab73f3a64dcf25307fc4ad.ctex"]
 
 [params]
 
