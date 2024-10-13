@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cbu5jbn1p4i50"]
+[gd_scene load_steps=10 format=3 uid="uid://cbu5jbn1p4i50"]
 
 [ext_resource type="PackedScene" uid="uid://bd8b7if2ibaw6" path="res://character.tscn" id="1_0rx4w"]
 [ext_resource type="Script" path="res://main.gd" id="1_5bfp1"]
 [ext_resource type="PackedScene" uid="uid://bh2lqwtxil2un" path="res://maurauder.tscn" id="2_fpm6u"]
 [ext_resource type="Texture2D" uid="uid://3yk3mmnjni2j" path="res://DALL·E 2024-10-04 00.11.05 - A sci-fi style wall that can be used as a boundary in a game. The wall has a sleek, futuristic design with metallic panels, glowing neon strips, and t.webp" id="4_5ylrw"]
+[ext_resource type="Texture2D" uid="uid://lw34dw2n1xkf" path="res://DALL·E 2024-10-13 20.05.30 - A dystopian sci-fi background featuring a bland, overbearing atmosphere. The setting should be industrial and imposing, with towering metallic structu.webp" id="5_n05um"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5rnu0"]
 size = Vector2(20, 647)
@@ -19,6 +20,13 @@ size = Vector2(1152, 20)
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_5bfp1")
+
+[node name="backGround" type="Sprite2D" parent="."]
+light_mask = 524288
+visibility_layer = 524288
+position = Vector2(576.5, 323.5)
+scale = Vector2(1.10645, 0.612305)
+texture = ExtResource("5_n05um")
 
 [node name="char" parent="." groups=["player"] instance=ExtResource("1_0rx4w")]
 position = Vector2(358, 421)
