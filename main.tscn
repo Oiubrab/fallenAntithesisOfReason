@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://bd8b7if2ibaw6" path="res://character.tscn" id="1_0rx4w"]
 [ext_resource type="Script" path="res://main.gd" id="1_5bfp1"]
+[ext_resource type="Texture2D" uid="uid://daep3x451f666" path="res://images/swampy_jungle.webp" id="2_csn0a"]
 [ext_resource type="PackedScene" uid="uid://bh2lqwtxil2un" path="res://maurauder.tscn" id="2_fpm6u"]
 [ext_resource type="Texture2D" uid="uid://3yk3mmnjni2j" path="res://DALL·E 2024-10-04 00.11.05 - A sci-fi style wall that can be used as a boundary in a game. The wall has a sleek, futuristic design with metallic panels, glowing neon strips, and t.webp" id="4_5ylrw"]
-[ext_resource type="Texture2D" uid="uid://lw34dw2n1xkf" path="res://DALL·E 2024-10-13 20.05.30 - A dystopian sci-fi background featuring a bland, overbearing atmosphere. The setting should be industrial and imposing, with towering metallic structu.webp" id="5_n05um"]
 [ext_resource type="FontFile" uid="uid://mh3qgnoyycbf" path="res://fonts/SixtyfourConvergence-Regular-VariableFont_BLED,SCAN,XELA,YELA.ttf" id="6_8grsv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5rnu0"]
@@ -27,12 +27,16 @@ light_mask = 524288
 visibility_layer = 524288
 position = Vector2(576.5, 323.5)
 scale = Vector2(1.10645, 0.612305)
-texture = ExtResource("5_n05um")
+texture = ExtResource("2_csn0a")
 
 [node name="char" parent="." groups=["player"] instance=ExtResource("1_0rx4w")]
 position = Vector2(358, 421)
 collision_layer = 3
 collision_mask = 3
+
+[node name="Camera2D" type="Camera2D" parent="char"]
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
 
 [node name="maurauder" parent="." instance=ExtResource("2_fpm6u")]
 position = Vector2(781, 412)

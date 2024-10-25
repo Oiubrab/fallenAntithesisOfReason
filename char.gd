@@ -5,6 +5,7 @@ var health = 5  # Starting health
 var damage_cooldown = 0.5  # Cooldown time in seconds
 var cooldown_timer = 0.0  # Timer for cooldown
 var pushback_force = 800  # Define the pushback force here
+var max_height = 350 # Stop the character from moving above the ground
 
 func _ready():
 	update_health_display()
@@ -18,7 +19,7 @@ func _process(delta):
 		input_vector.x -= 1
 	if Input.is_action_pressed("ui_down"):
 		input_vector.y += 1
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("ui_up") and (position.y > max_height):
 		input_vector.y -= 1
 
 	input_vector = input_vector.normalized() * speed

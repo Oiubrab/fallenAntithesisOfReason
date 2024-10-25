@@ -31,7 +31,7 @@ func _ready():
 		patrols.append(new_patrol)
 
 
-func _process(delta):
+func _process(_delta):
 	# Update marauder to chase the player
 	marauder.player_position = player.position  # Pass player's position to the marauder
 	
