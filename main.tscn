@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://main.gd" id="1_5bfp1"]
 [ext_resource type="Texture2D" uid="uid://daep3x451f666" path="res://images/swampy_jungle.webp" id="2_csn0a"]
 [ext_resource type="PackedScene" uid="uid://bh2lqwtxil2un" path="res://maurauder.tscn" id="2_fpm6u"]
-[ext_resource type="Texture2D" uid="uid://3yk3mmnjni2j" path="res://DALL·E 2024-10-04 00.11.05 - A sci-fi style wall that can be used as a boundary in a game. The wall has a sleek, futuristic design with metallic panels, glowing neon strips, and t.webp" id="4_5ylrw"]
+[ext_resource type="Texture2D" uid="uid://3yk3mmnjni2j" path="res://images/wall.webp" id="4_5ylrw"]
 [ext_resource type="FontFile" uid="uid://mh3qgnoyycbf" path="res://fonts/SixtyfourConvergence-Regular-VariableFont_BLED,SCAN,XELA,YELA.ttf" id="6_8grsv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5rnu0"]
