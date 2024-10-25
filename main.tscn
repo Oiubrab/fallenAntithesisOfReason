@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://cbu5jbn1p4i50"]
+[gd_scene load_steps=11 format=3 uid="uid://cbu5jbn1p4i50"]
 
 [ext_resource type="PackedScene" uid="uid://bd8b7if2ibaw6" path="res://character.tscn" id="1_0rx4w"]
 [ext_resource type="Script" path="res://main.gd" id="1_5bfp1"]
 [ext_resource type="PackedScene" uid="uid://bh2lqwtxil2un" path="res://maurauder.tscn" id="2_fpm6u"]
 [ext_resource type="Texture2D" uid="uid://3yk3mmnjni2j" path="res://DALL·E 2024-10-04 00.11.05 - A sci-fi style wall that can be used as a boundary in a game. The wall has a sleek, futuristic design with metallic panels, glowing neon strips, and t.webp" id="4_5ylrw"]
 [ext_resource type="Texture2D" uid="uid://lw34dw2n1xkf" path="res://DALL·E 2024-10-13 20.05.30 - A dystopian sci-fi background featuring a bland, overbearing atmosphere. The setting should be industrial and imposing, with towering metallic structu.webp" id="5_n05um"]
+[ext_resource type="FontFile" uid="uid://mh3qgnoyycbf" path="res://fonts/SixtyfourConvergence-Regular-VariableFont_BLED,SCAN,XELA,YELA.ttf" id="6_8grsv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5rnu0"]
 size = Vector2(20, 647)
@@ -99,8 +100,23 @@ anchor_left = 0.009
 anchor_top = 0.015
 anchor_right = 0.065
 anchor_bottom = 0.083
-offset_left = -0.368001
-offset_top = 0.28
-offset_right = -24.88
-offset_bottom = -20.784
+offset_left = 10.632
+offset_top = 10.28
+offset_right = 90.12
+offset_bottom = -10.784
+theme_override_colors/font_color = Color(0.771743, 0.332321, 0.500433, 1)
+theme_override_colors/font_shadow_color = Color(0.372466, 0.19557, 0.164163, 1)
+theme_override_fonts/font = ExtResource("6_8grsv")
 text = "Health: 5"
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.076
+anchor_top = -0.435
+anchor_right = 1.097
+anchor_bottom = 1.565
+offset_left = -9.056
+offset_top = -9.995
+offset_right = -8.968
+offset_bottom = -9.995
