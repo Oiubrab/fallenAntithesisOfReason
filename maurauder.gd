@@ -10,7 +10,7 @@ func _process(delta):
 	var direction = (player_position - position).normalized()
 
 	# Move towards the player
-	velocity = direction * (speed / 2)
+	velocity = direction * (speed / 2.0)
 
 	# Add any remaining pushback velocity to movement
 	velocity += pushback_velocity
