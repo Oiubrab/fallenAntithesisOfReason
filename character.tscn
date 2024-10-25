@@ -4,8 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://dffsf7v2nr7yf" path="res://images/Litta.png" id="2_5451j"]
 
 [node name="Litta" type="CharacterBody2D"]
-position = Vector2(287, 288)
+position = Vector2(238, 447)
 script = ExtResource("1_hp67h")
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-7.62939e-06, 1.52588e-05)

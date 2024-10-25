@@ -37,3 +37,9 @@ func _process(delta):
 			# Push back the patrol or maurauder smoothly
 			var pushback_direction = (position - collision.get_position()).normalized()
 			pushback_velocity = pushback_direction * pushback_force  # Apply the pushback force as velocity
+	
+	# Check if moving right or left and flip the sprite
+	if velocity.x > 0:
+		$Sprite2D.flip_h = true  # Flips sprite horizontally when moving right
+	elif velocity.x < 0:
+		$Sprite2D.flip_h = false  # Normal orientation when moving left
