@@ -55,7 +55,7 @@ func increase_health():
 
 # Function to update the health label in the UI
 func update_health_display():
-	var label = get_node("/root/main/CanvasLayer/Panel/Label")
+	var label = get_node("/root/main/CanvasLayer/Panel/char_health_label")
 	label.text = "Health: " + str(health)
 
 # Game over function

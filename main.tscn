@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cbu5jbn1p4i50"]
+[gd_scene load_steps=16 format=3 uid="uid://cbu5jbn1p4i50"]
 
 [ext_resource type="PackedScene" uid="uid://bd8b7if2ibaw6" path="res://character.tscn" id="1_0rx4w"]
 [ext_resource type="Script" path="res://main.gd" id="1_5bfp1"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dp8uf33q4fmyn" path="res://images/hud_pannel.png" id="6_qqwrr"]
 [ext_resource type="Texture2D" uid="uid://bobhusr5hxue2" path="res://images/swampy_jungle2.webp" id="7_h346f"]
 [ext_resource type="Texture2D" uid="uid://b2xhwh2ymjnd3" path="res://images/swampy_jungle3.webp" id="8_gbcm1"]
+[ext_resource type="FontFile" uid="uid://dhn881pjuqics" path="res://fonts/montreal/Montreal-Bold.ttf" id="8_y8owg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5rnu0"]
 size = Vector2(20, 647)
@@ -28,7 +29,7 @@ texture = ExtResource("6_qqwrr")
 [node name="main" type="Node2D"]
 script = ExtResource("1_5bfp1")
 
-[node name="backGround1" type="Sprite2D" parent="."]
+[node name="backGround1" type="Sprite2D" parent="." groups=["repeater"]]
 light_mask = 524288
 visibility_layer = 524288
 position = Vector2(580.999, 323.5)
@@ -44,7 +45,7 @@ collision_mask = 3
 zoom = Vector2(2.7, 2.7)
 position_smoothing_enabled = true
 
-[node name="maurauder" parent="." instance=ExtResource("2_fpm6u")]
+[node name="maurauder" parent="." groups=["threnss"] instance=ExtResource("2_fpm6u")]
 position = Vector2(832, 496)
 collision_layer = 2
 
@@ -119,21 +120,36 @@ offset_right = -959.744
 offset_bottom = -764.12
 theme_override_styles/panel = SubResource("StyleBoxTexture_3n5tb")
 
-[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+[node name="char_health_label" type="Label" parent="CanvasLayer/Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.009
-anchor_top = 0.015
-anchor_right = 0.065
-anchor_bottom = 0.083
-offset_left = 83.354
-offset_top = 42.4
-offset_right = 211.338
-offset_bottom = 42.08
+anchor_left = 0.293
+anchor_top = 0.125
+anchor_right = 0.782
+anchor_bottom = 0.325
+offset_left = -0.142006
+offset_top = 16.0
+offset_right = 0.539978
+offset_bottom = -16.0
 theme_override_colors/font_color = Color(0.771743, 0.332321, 0.500433, 1)
 theme_override_colors/font_shadow_color = Color(0.372466, 0.19557, 0.164163, 1)
 theme_override_fonts/font = ExtResource("6_8grsv")
 text = "Health: 5"
+
+[node name="repeater_health_label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.293
+anchor_top = 0.325
+anchor_right = 0.782
+anchor_bottom = 0.492
+offset_left = -0.142006
+offset_top = -2.28882e-05
+offset_right = 0.09198
+offset_bottom = -17.08
+theme_override_colors/font_color = Color(0.69721, 0.931219, 1, 1)
+theme_override_fonts/font = ExtResource("8_y8owg")
+text = "Repeater: 50"
 
 [node name="background2" type="Sprite2D" parent="."]
 light_mask = 524288
