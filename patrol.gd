@@ -7,6 +7,7 @@ var rotation_random = 0
 var base_speed = 10000  # Set a base speed for the patrol's normal movement
 var pushback_velocity = Vector2()  # Stores the velocity from the pushback
 var pushback_deceleration = 600  # Controls how quickly the pushback slows down
+var angular_rotation = 0
 
 func _process(delta):
 	sequence += 1
@@ -21,11 +22,11 @@ func auto_motion_rotational():
 	else:
 		var gauss = (float(sequence % int(epoch_random)) - (float(epoch_random) / 2.0)) / float(epoch_random / 8)
 		var gaussian = exp(-1.0 * pow(gauss, 2))
-		rotation += (PI / 16) * rotation_random * gaussian
+		angular_rotation += (PI / 16) * rotation_random * gaussian
 
 func auto_motion_linear(delta):
 	# Generate random movement based on rotation
-	var direction = Vector2(cos(rotation), sin(rotation)).normalized()
+	var direction = Vector2(cos(angular_rotation), sin(angular_rotation)).normalized()
 
 	# Speed increases as the patrol gets closer to the player (char)
 	var char_position = get_node("../char").position

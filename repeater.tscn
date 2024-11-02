@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xeoc"]
 size = Vector2(96, 112)
 
-[node name="repeater" type="StaticBody2D" groups=["repeater"]]
+[node name="repeater" type="StaticBody2D"]
 position = Vector2(1072, 560)
 collision_layer = 3
 metadata/_edit_group_ = true
