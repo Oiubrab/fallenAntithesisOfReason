@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3yk3mmnjni2j"
-path="res://.godot/imported/wall.webp-2c95b882bd4151e6c3b36bb801f36826.ctex"
+uid="uid://2buc5nedaahb"
+path="res://.godot/imported/Threnss.png-e9168646df58a003aa0a19d3e930c725.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/wall.webp"
-dest_files=["res://.godot/imported/wall.webp-2c95b882bd4151e6c3b36bb801f36826.ctex"]
+source_file="res://images/creatures/Threnss.png"
+dest_files=["res://.godot/imported/Threnss.png-e9168646df58a003aa0a19d3e930c725.ctex"]
 
 [params]
 

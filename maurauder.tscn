@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bh2lqwtxil2un"]
 
 [ext_resource type="Script" path="res://maurauder.gd" id="1_i5c7e"]
-[ext_resource type="Texture2D" uid="uid://2buc5nedaahb" path="res://images/Threnss.png" id="2_6mcve"]
+[ext_resource type="Texture2D" uid="uid://2buc5nedaahb" path="res://images/creatures/Threnss.png" id="2_6mcve"]
 
 [node name="maurauder" type="CharacterBody2D"]
 script = ExtResource("1_i5c7e")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu64t6auadmeh"
-path="res://.godot/imported/cropped_repeater.png-bfb87f842b3dfa6cb3b5580b52c50859.ctex"
+uid="uid://bjt8xro4nr6oo"
+path="res://.godot/imported/inner_sanctum.jpeg-aa5587904390e3d6752e5b95a6b6ba31.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/cropped_repeater.png"
-dest_files=["res://.godot/imported/cropped_repeater.png-bfb87f842b3dfa6cb3b5580b52c50859.ctex"]
+source_file="res://images/background/inner_sanctum.jpeg"
+dest_files=["res://.godot/imported/inner_sanctum.jpeg-aa5587904390e3d6752e5b95a6b6ba31.ctex"]
 
 [params]
 

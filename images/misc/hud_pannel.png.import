@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2xhwh2ymjnd3"
-path="res://.godot/imported/swampy_jungle3.webp-7f1e6e054b860e224d30c77ff9dcd034.ctex"
+uid="uid://dp8uf33q4fmyn"
+path="res://.godot/imported/hud_pannel.png-cb99c02e22e43d4f05e73d86d9a9355c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/swampy_jungle3.webp"
-dest_files=["res://.godot/imported/swampy_jungle3.webp-7f1e6e054b860e224d30c77ff9dcd034.ctex"]
+source_file="res://images/misc/hud_pannel.png"
+dest_files=["res://.godot/imported/hud_pannel.png-cb99c02e22e43d4f05e73d86d9a9355c.ctex"]
 
 [params]
 

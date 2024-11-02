@@ -8,7 +8,7 @@ func _ready():
 	connect("body_entered", Callable(self, "_on_body_entered"))
 
 func _on_body_entered(body):
-	print("player: " + str(body.is_in_group("player")) + " threnss: " + str(body.is_in_group("threnss")))
+	#print("player: " + str(body.is_in_group("player")) + " threnss: " + str(body.is_in_group("threnss")))
 	# Check if the colliding body is the character
 	if body.is_in_group("player"):
 		# Increase the character's health

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjw1do3wdeom1"
-path="res://.godot/imported/patrol.png-244738b49bab73f3a64dcf25307fc4ad.ctex"
+uid="uid://c0nlkt4stsxtu"
+path="res://.godot/imported/Aksjub.webp-e8d7366f27eedb982a9a1379d61d4ddd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/patrol.png"
-dest_files=["res://.godot/imported/patrol.png-244738b49bab73f3a64dcf25307fc4ad.ctex"]
+source_file="res://images/background/Aksjub.webp"
+dest_files=["res://.godot/imported/Aksjub.webp-e8d7366f27eedb982a9a1379d61d4ddd.ctex"]
 
 [params]
 

@@ -6,6 +6,15 @@ var player
 var marauder
 var repeater_scene = preload("res://repeater.tscn")
 
+enum battle_states {
+	RAIDERHUNTER,
+	INVASION,
+	REINFORCEMENT,
+	PEACE
+}
+
+var battle_state = battle_states.PEACE
+
 func spawn_repeaters():
 	for i in range(3):
 		# Create an instance of the Repeater
@@ -57,6 +66,18 @@ func _process(_delta):
 	# Update marauder to chase the player
 	marauder.player_position = player.position  # Pass player's position to the marauder
 	
-	# Optional: Control patrols here if needed
-	for patrol in patrols:
-		pass  # If patrol logic is handled in their script, no need to do anything here
+	var time_left = $survival_timer.time_left
+	var status = get_node("CanvasLayer/Panel/status_label")
+	if time_left > 120.0 and time_left < 180.0 and battle_state == battle_states.PEACE:
+		battle_state = battle_states.RAIDERHUNTER
+		status.text = "Status: Raiders And Hunters"
+	elif time_left > 60.0 and time_left < 120.0 and battle_state == battle_states.RAIDERHUNTER:
+		battle_state = battle_states.INVASION
+		status.text = "Status: Invasion"
+	elif time_left < 60.0 and battle_state == battle_states.INVASION:
+		battle_state = battle_states.REINFORCEMENT
+		status.text = "Status: Reinforcement"
+
+
+func _on_survival_timer_timeout() -> void:
+	print("Timer finished!")

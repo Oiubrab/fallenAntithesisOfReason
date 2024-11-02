@@ -32,9 +32,20 @@ func _process(delta):
 	elif velocity.x < 0:
 		$Sprite2D.flip_h = true  # Flips sprite horizontally when moving left
 
-	# Call move_and_slide() after setting velocity
-	move_and_collide(velocity * delta)
 
+
+
+	# Call move_and_slide() after setting velocity
+	var collision = move_and_collide(velocity * delta)
+
+	# Check if a collision happened
+	if collision:
+		if collision.get_collider().is_in_group("threnss"):  # Ensure the collider is the player
+
+			# Push back the patrol or maurauder smoothly
+			var pushback_direction = (position - collision.get_position()).normalized()
+			position += pushback_direction * 10  # Move this object back by 10 pixels
+			
 	# Handle cooldown
 	if cooldown_timer > 0:
 		cooldown_timer -= delta

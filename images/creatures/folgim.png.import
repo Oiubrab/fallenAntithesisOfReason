@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp8uf33q4fmyn"
-path="res://.godot/imported/hud_pannel.png-0a9a60433c73a3b99d03d8f01df4c391.ctex"
+uid="uid://58q35y1kx1iy"
+path="res://.godot/imported/folgim.png-487290c031ffb81f96ae252ce490c9be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/hud_pannel.png"
-dest_files=["res://.godot/imported/hud_pannel.png-0a9a60433c73a3b99d03d8f01df4c391.ctex"]
+source_file="res://images/creatures/folgim.png"
+dest_files=["res://.godot/imported/folgim.png-487290c031ffb81f96ae252ce490c9be.ctex"]
 
 [params]
 

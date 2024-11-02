@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ubpjw3ln1q7t"]
 
 [ext_resource type="Script" path="res://start_screen.gd" id="1_b7re0"]
-[ext_resource type="Texture2D" uid="uid://c0nlkt4stsxtu" path="res://images/Aksjub.webp" id="2_vk4mf"]
+[ext_resource type="Texture2D" uid="uid://c0nlkt4stsxtu" path="res://images/background/Aksjub.webp" id="2_vk4mf"]
 
 [node name="start_screen" type="Control"]
 layout_mode = 3

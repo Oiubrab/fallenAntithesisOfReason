@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu5jiosuwq5x6"
-path="res://.godot/imported/maurauder.png-5f823be112f702522ebdf7eb74dbd01c.ctex"
+uid="uid://bobhusr5hxue2"
+path="res://.godot/imported/swampy_jungle2.webp-2d64d5d2b9ee1f34e73eb6f22630acbd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/maurauder.png"
-dest_files=["res://.godot/imported/maurauder.png-5f823be112f702522ebdf7eb74dbd01c.ctex"]
+source_file="res://images/background/swampy_jungle2.webp"
+dest_files=["res://.godot/imported/swampy_jungle2.webp-2d64d5d2b9ee1f34e73eb6f22630acbd.ctex"]
 
 [params]
 

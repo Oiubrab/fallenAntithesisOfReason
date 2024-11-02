@@ -1,15 +1,15 @@
 [gd_scene load_steps=16 format=3 uid="uid://cbu5jbn1p4i50"]
 
-[ext_resource type="PackedScene" uid="uid://bd8b7if2ibaw6" path="res://character.tscn" id="1_0rx4w"]
-[ext_resource type="Script" path="res://main.gd" id="1_5bfp1"]
-[ext_resource type="Texture2D" uid="uid://daep3x451f666" path="res://images/swampy_jungle.webp" id="2_csn0a"]
-[ext_resource type="PackedScene" uid="uid://bh2lqwtxil2un" path="res://maurauder.tscn" id="2_fpm6u"]
-[ext_resource type="Texture2D" uid="uid://3yk3mmnjni2j" path="res://images/wall.webp" id="4_5ylrw"]
-[ext_resource type="FontFile" uid="uid://mh3qgnoyycbf" path="res://fonts/SixtyfourConvergence-Regular-VariableFont_BLED,SCAN,XELA,YELA.ttf" id="6_8grsv"]
-[ext_resource type="Texture2D" uid="uid://dp8uf33q4fmyn" path="res://images/hud_pannel.png" id="6_qqwrr"]
-[ext_resource type="Texture2D" uid="uid://bobhusr5hxue2" path="res://images/swampy_jungle2.webp" id="7_h346f"]
-[ext_resource type="Texture2D" uid="uid://b2xhwh2ymjnd3" path="res://images/swampy_jungle3.webp" id="8_gbcm1"]
-[ext_resource type="FontFile" uid="uid://dhn881pjuqics" path="res://fonts/montreal/Montreal-Bold.ttf" id="8_y8owg"]
+[ext_resource type="Script" path="res://battle_moon_question.gd" id="1_mop6u"]
+[ext_resource type="Texture2D" uid="uid://daep3x451f666" path="res://images/background/swampy_jungle.webp" id="2_w28ke"]
+[ext_resource type="PackedScene" uid="uid://bd8b7if2ibaw6" path="res://character.tscn" id="3_75tcw"]
+[ext_resource type="PackedScene" uid="uid://bh2lqwtxil2un" path="res://maurauder.tscn" id="4_qtwcn"]
+[ext_resource type="Texture2D" uid="uid://3yk3mmnjni2j" path="res://images/misc/wall.webp" id="5_447ii"]
+[ext_resource type="Texture2D" uid="uid://dp8uf33q4fmyn" path="res://images/misc/hud_pannel.png" id="6_fd5tf"]
+[ext_resource type="FontFile" uid="uid://mh3qgnoyycbf" path="res://fonts/SixtyfourConvergence-Regular-VariableFont_BLED,SCAN,XELA,YELA.ttf" id="7_iogna"]
+[ext_resource type="FontFile" uid="uid://dhn881pjuqics" path="res://fonts/montreal/Montreal-Bold.ttf" id="8_ytir4"]
+[ext_resource type="Texture2D" uid="uid://bobhusr5hxue2" path="res://images/background/swampy_jungle2.webp" id="9_537ys"]
+[ext_resource type="Texture2D" uid="uid://b2xhwh2ymjnd3" path="res://images/background/swampy_jungle3.webp" id="10_qd7cs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5rnu0"]
 size = Vector2(20, 647)
@@ -24,28 +24,27 @@ size = Vector2(20, 648)
 size = Vector2(1152, 20)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3n5tb"]
-texture = ExtResource("6_qqwrr")
+texture = ExtResource("6_fd5tf")
 
 [node name="main" type="Node2D"]
-script = ExtResource("1_5bfp1")
+script = ExtResource("1_mop6u")
 
 [node name="backGround1" type="Sprite2D" parent="." groups=["repeater"]]
 light_mask = 524288
 visibility_layer = 524288
 position = Vector2(580.999, 323.5)
 scale = Vector2(1.11524, 0.612305)
-texture = ExtResource("2_csn0a")
+texture = ExtResource("2_w28ke")
 
-[node name="char" parent="." groups=["player"] instance=ExtResource("1_0rx4w")]
+[node name="char" parent="." groups=["player"] instance=ExtResource("3_75tcw")]
 position = Vector2(224, 528)
-collision_layer = 3
 collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="char"]
 zoom = Vector2(2.7, 2.7)
 position_smoothing_enabled = true
 
-[node name="maurauder" parent="." groups=["threnss"] instance=ExtResource("2_fpm6u")]
+[node name="maurauder" parent="." groups=["threnss"] instance=ExtResource("4_qtwcn")]
 position = Vector2(832, 496)
 collision_layer = 2
 
@@ -59,7 +58,7 @@ shape = SubResource("RectangleShape2D_5rnu0")
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(2.38419e-07, 1)
 scale = Vector2(0.222222, 1.23429)
-texture = ExtResource("4_5ylrw")
+texture = ExtResource("5_447ii")
 region_enabled = true
 region_rect = Rect2(503.947, 181.846, 90.1886, 525.026)
 
@@ -74,7 +73,7 @@ shape = SubResource("RectangleShape2D_qwlrw")
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
 position = Vector2(114, -1)
 scale = Vector2(1.12171, 0.578947)
-texture = ExtResource("4_5ylrw")
+texture = ExtResource("5_447ii")
 region_enabled = true
 region_rect = Rect2(2.09503, 769.929, 1027.53, 38.599)
 
@@ -88,7 +87,7 @@ shape = SubResource("RectangleShape2D_oiet6")
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3"]
 position = Vector2(-1.72853e-05, 0)
 scale = Vector2(0.25974, 0.713656)
-texture = ExtResource("4_5ylrw")
+texture = ExtResource("5_447ii")
 region_enabled = true
 region_rect = Rect2(305.854, 30.4578, 77.3045, 908.328)
 
@@ -102,7 +101,7 @@ shape = SubResource("RectangleShape2D_u3rje")
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4"]
 position = Vector2(2.28882e-05, 0.500002)
 scale = Vector2(1.1261, 0.235955)
-texture = ExtResource("4_5ylrw")
+texture = ExtResource("5_447ii")
 region_enabled = true
 region_rect = Rect2(1.73474, 849.255, 1023.41, 89.3101)
 
@@ -117,7 +116,7 @@ anchor_bottom = 1.565
 offset_left = 97.552
 offset_top = 291.88
 offset_right = -959.744
-offset_bottom = -764.12
+offset_bottom = -750.12
 theme_override_styles/panel = SubResource("StyleBoxTexture_3n5tb")
 
 [node name="char_health_label" type="Label" parent="CanvasLayer/Panel"]
@@ -127,59 +126,73 @@ anchor_left = 0.293
 anchor_top = 0.125
 anchor_right = 0.782
 anchor_bottom = 0.325
-offset_left = -0.142006
-offset_top = 16.0
-offset_right = 0.539978
-offset_bottom = -16.0
+offset_left = -0.142014
+offset_top = 6.25
+offset_right = 0.539963
+offset_bottom = -25.75
 theme_override_colors/font_color = Color(0.771743, 0.332321, 0.500433, 1)
 theme_override_colors/font_shadow_color = Color(0.372466, 0.19557, 0.164163, 1)
-theme_override_fonts/font = ExtResource("6_8grsv")
+theme_override_fonts/font = ExtResource("7_iogna")
 text = "Health: 5"
 
 [node name="repeater1_health_label" type="Label" parent="CanvasLayer/Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.293
-anchor_top = 0.325
+anchor_left = 0.265
+anchor_top = 0.276
 anchor_right = 0.782
-anchor_bottom = 0.492
-offset_left = -0.142006
-offset_top = -2.28882e-05
-offset_right = 0.09198
-offset_bottom = -17.08
+anchor_bottom = 0.372
+offset_left = 8.08999
+offset_top = -0.104004
+offset_right = 2.092
+offset_bottom = -0.0879669
 theme_override_colors/font_color = Color(0.69721, 0.931219, 1, 1)
-theme_override_fonts/font = ExtResource("8_y8owg")
+theme_override_fonts/font = ExtResource("8_ytir4")
 text = "Repeater 1: 10000"
 
 [node name="repeater2_health_label" type="Label" parent="CanvasLayer/Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.293
-anchor_top = 0.492
+anchor_left = 0.265
+anchor_top = 0.402
 anchor_right = 0.782
-anchor_bottom = 0.658
-offset_left = -0.142014
-offset_top = 7.91997
-offset_right = 0.0919647
-offset_bottom = -8.92003
+anchor_bottom = 0.528
+offset_left = 8.08999
+offset_top = -0.108002
+offset_right = 5.092
+offset_bottom = -6.25001
 theme_override_colors/font_color = Color(0.69721, 0.931219, 1, 1)
-theme_override_fonts/font = ExtResource("8_y8owg")
+theme_override_fonts/font = ExtResource("8_ytir4")
 text = "Repeater 2: 10000"
 
 [node name="repeater3_health_label" type="Label" parent="CanvasLayer/Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.265
-anchor_top = 0.692
+anchor_top = 0.528
+anchor_right = 0.782
+anchor_bottom = 0.622
+offset_left = 8.08999
+offset_top = -0.112
+offset_right = 5.092
+offset_bottom = 0.342026
+theme_override_colors/font_color = Color(0.69721, 0.931219, 1, 1)
+theme_override_fonts/font = ExtResource("8_ytir4")
+text = "Repeater 3: 10000"
+
+[node name="status_label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.265
+anchor_top = 0.622
 anchor_right = 0.782
 anchor_bottom = 0.821
 offset_left = 8.08999
-offset_top = 7.91995
-offset_right = 0.0919647
-offset_bottom = -0.0400238
-theme_override_colors/font_color = Color(0.69721, 0.931219, 1, 1)
-theme_override_fonts/font = ExtResource("8_y8owg")
-text = "Repeater 3: 10000"
+offset_top = 0.0119934
+offset_right = 2.09198
+offset_bottom = -1.53401
+text = "Status: Raiders and Hunters"
+autowrap_mode = 3
 
 [node name="background2" type="Sprite2D" parent="."]
 light_mask = 524288
@@ -187,7 +200,7 @@ visibility_layer = 524288
 z_index = -2
 position = Vector2(2992, 324)
 scale = Vector2(0.517299, 0.612305)
-texture = ExtResource("7_h346f")
+texture = ExtResource("9_537ys")
 
 [node name="background3" type="Sprite2D" parent="."]
 light_mask = 524288
@@ -195,7 +208,7 @@ visibility_layer = 524288
 z_index = -2
 position = Vector2(1840.25, 323.25)
 scale = Vector2(0.768136, 0.611816)
-texture = ExtResource("8_gbcm1")
+texture = ExtResource("10_qd7cs")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="."]
 position = Vector2(1616, 0)
@@ -208,7 +221,7 @@ shape = SubResource("RectangleShape2D_qwlrw")
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5"]
 position = Vector2(114, -1)
 scale = Vector2(1.12171, 0.578947)
-texture = ExtResource("4_5ylrw")
+texture = ExtResource("5_447ii")
 region_enabled = true
 region_rect = Rect2(2.09503, 769.929, 1027.53, 38.599)
 
@@ -223,7 +236,7 @@ shape = SubResource("RectangleShape2D_qwlrw")
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D6"]
 position = Vector2(114, -1)
 scale = Vector2(1.12171, 0.578947)
-texture = ExtResource("4_5ylrw")
+texture = ExtResource("5_447ii")
 region_enabled = true
 region_rect = Rect2(2.09503, 769.929, 1027.53, 38.599)
 
@@ -237,7 +250,7 @@ shape = SubResource("RectangleShape2D_u3rje")
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D7"]
 position = Vector2(2.28882e-05, 0.500002)
 scale = Vector2(1.1261, 0.235955)
-texture = ExtResource("4_5ylrw")
+texture = ExtResource("5_447ii")
 region_enabled = true
 region_rect = Rect2(1.73474, 849.255, 1023.41, 89.3101)
 
@@ -251,6 +264,13 @@ shape = SubResource("RectangleShape2D_u3rje")
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D8"]
 position = Vector2(2.28882e-05, 0.500002)
 scale = Vector2(1.1261, 0.235955)
-texture = ExtResource("4_5ylrw")
+texture = ExtResource("5_447ii")
 region_enabled = true
 region_rect = Rect2(1.73474, 849.255, 1023.41, 89.3101)
+
+[node name="survival_timer" type="Timer" parent="."]
+wait_time = 180.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="survival_timer" to="." method="_on_survival_timer_timeout"]

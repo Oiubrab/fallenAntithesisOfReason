@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cabtcmik70uje"
-path="res://.godot/imported/flying_threnss.png-b9b531c164269c5677505a940138ba21.ctex"
+uid="uid://dffsf7v2nr7yf"
+path="res://.godot/imported/Litta.png-99bddfe3d8c032dfef53d5b12bb2e5ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/flying_threnss.png"
-dest_files=["res://.godot/imported/flying_threnss.png-b9b531c164269c5677505a940138ba21.ctex"]
+source_file="res://images/creatures/Litta.png"
+dest_files=["res://.godot/imported/Litta.png-99bddfe3d8c032dfef53d5b12bb2e5ad.ctex"]
 
 [params]
 

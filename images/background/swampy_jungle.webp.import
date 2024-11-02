@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxwx35ngg84yb"
-path="res://.godot/imported/repeater.png-8c4788b87b14a013672b1183e0a9327e.ctex"
+uid="uid://daep3x451f666"
+path="res://.godot/imported/swampy_jungle.webp-bcac5e2b0d3639cc4b72898698a74141.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/repeater.png"
-dest_files=["res://.godot/imported/repeater.png-8c4788b87b14a013672b1183e0a9327e.ctex"]
+source_file="res://images/background/swampy_jungle.webp"
+dest_files=["res://.godot/imported/swampy_jungle.webp-bcac5e2b0d3639cc4b72898698a74141.ctex"]
 
 [params]
 

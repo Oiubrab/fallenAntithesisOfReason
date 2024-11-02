@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bd8b7if2ibaw6"]
 
 [ext_resource type="Script" path="res://char.gd" id="1_hp67h"]
-[ext_resource type="Texture2D" uid="uid://dffsf7v2nr7yf" path="res://images/Litta.png" id="2_5451j"]
+[ext_resource type="Texture2D" uid="uid://dffsf7v2nr7yf" path="res://images/creatures/Litta.png" id="2_5451j"]
 
 [node name="Litta" type="CharacterBody2D"]
 position = Vector2(238, 447)

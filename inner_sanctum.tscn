@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3om1vnhqfefi"]
+
+[ext_resource type="Texture2D" uid="uid://bjt8xro4nr6oo" path="res://images/background/inner_sanctum.jpeg" id="1_3wawl"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(1.125, 0.632812)
+texture = ExtResource("1_3wawl")
