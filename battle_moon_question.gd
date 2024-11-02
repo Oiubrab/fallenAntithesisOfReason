@@ -80,4 +80,4 @@ func _process(_delta):
 
 
 func _on_survival_timer_timeout() -> void:
-	print("Timer finished!")
+	get_tree().change_scene_to_file("res://inner_sanctum.tscn")  # Change to your main game scene

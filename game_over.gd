@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_restart_pressed() -> void:
-	get_tree().change_scene_to_file("res://main.tscn")  # Replace with your main game scene
+	get_tree().change_scene_to_file("res://battle_moon_question.tscn")  # Replace with your main game scene
 
 
 func _on_quit_pressed() -> void:
