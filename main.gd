@@ -6,24 +6,25 @@ var player
 var marauder
 var repeater_scene = preload("res://repeater.tscn")
 
-func spawn_repeater():
-	# Create an instance of the Repeater
-	var repeater_instance = repeater_scene.instantiate()
+func spawn_repeaters():
+	for i in range(3):
+		# Create an instance of the Repeater
+		var repeater_instance = repeater_scene.instantiate()
+		repeater_instance.name = "repeater" + str(i + 1)  # Assign a predictable name: repeater1, repeater2, repeater3
+		# Randomly set its position within the specified bounds
+		var x_position = randi_range(0, 3456)
+		var y_position = randi_range(384, 560)
+		repeater_instance.position = Vector2(x_position, y_position)
 
-	# Randomly set its position within the specified bounds
-	var x_position = randi_range(0, 3456)
-	var y_position = randi_range(384, 560)
-	repeater_instance.position = Vector2(x_position, y_position)
+		# Add the repeater instance to the "Repeater" group
+		repeater_instance.add_to_group("repeater")
 
-	# Add the repeater instance to the "Repeater" group
-	repeater_instance.add_to_group("repeater")
-
-	# Add the instance to the scene tree
-	add_child(repeater_instance)
+		# Add the instance to the scene tree
+		add_child(repeater_instance)
 
 func spawn_patrol():
 	# Create multiple patrol instances at random positions
-	for i in range(5):  # Example: 5 patrols
+	for i in range(10):  # 10 patrols
 		var new_patrol = patrol_scene.instantiate()
 		var random_pos = Vector2()  # Declare the variable here
 		var is_position_valid = false
@@ -31,7 +32,7 @@ func spawn_patrol():
 		new_patrol.add_to_group("threnss")
 		
 		while not is_position_valid:
-			random_pos = Vector2(randi_range(100, 850), randi_range(100, 650))  # Adjusted bounds
+			random_pos = Vector2(randi_range(100, 3328), randi_range(100, 350))  # Adjusted bounds
 			is_position_valid = true
 			
 			# Check if the new position collides with existing patrols
@@ -45,7 +46,7 @@ func spawn_patrol():
 		patrols.append(new_patrol)
 
 func _ready():
-	spawn_repeater()
+	spawn_repeaters()
 	spawn_patrol()
 
 	# Get references to player and marauder

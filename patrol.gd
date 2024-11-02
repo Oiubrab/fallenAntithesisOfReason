@@ -63,3 +63,6 @@ func auto_motion_linear(delta):
 			# Push back the patrol or maurauder smoothly
 			var pushback_direction = (position - collision.get_position()).normalized()
 			pushback_velocity = pushback_direction * pushback_force  # Apply the pushback force as velocity
+			
+		elif collision.get_collider().is_in_group("repeater"):
+			collision.get_collider().decrease_health()

@@ -37,7 +37,7 @@ scale = Vector2(1.11524, 0.612305)
 texture = ExtResource("2_csn0a")
 
 [node name="char" parent="." groups=["player"] instance=ExtResource("1_0rx4w")]
-position = Vector2(358, 421)
+position = Vector2(224, 528)
 collision_layer = 3
 collision_mask = 3
 
@@ -136,7 +136,7 @@ theme_override_colors/font_shadow_color = Color(0.372466, 0.19557, 0.164163, 1)
 theme_override_fonts/font = ExtResource("6_8grsv")
 text = "Health: 5"
 
-[node name="repeater_health_label" type="Label" parent="CanvasLayer/Panel"]
+[node name="repeater1_health_label" type="Label" parent="CanvasLayer/Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.293
@@ -149,7 +149,37 @@ offset_right = 0.09198
 offset_bottom = -17.08
 theme_override_colors/font_color = Color(0.69721, 0.931219, 1, 1)
 theme_override_fonts/font = ExtResource("8_y8owg")
-text = "Repeater: 50"
+text = "Repeater 1: 10000"
+
+[node name="repeater2_health_label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.293
+anchor_top = 0.492
+anchor_right = 0.782
+anchor_bottom = 0.658
+offset_left = -0.142014
+offset_top = 7.91997
+offset_right = 0.0919647
+offset_bottom = -8.92003
+theme_override_colors/font_color = Color(0.69721, 0.931219, 1, 1)
+theme_override_fonts/font = ExtResource("8_y8owg")
+text = "Repeater 2: 10000"
+
+[node name="repeater3_health_label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.265
+anchor_top = 0.692
+anchor_right = 0.782
+anchor_bottom = 0.821
+offset_left = 8.08999
+offset_top = 7.91995
+offset_right = 0.0919647
+offset_bottom = -0.0400238
+theme_override_colors/font_color = Color(0.69721, 0.931219, 1, 1)
+theme_override_fonts/font = ExtResource("8_y8owg")
+text = "Repeater 3: 10000"
 
 [node name="background2" type="Sprite2D" parent="."]
 light_mask = 524288
