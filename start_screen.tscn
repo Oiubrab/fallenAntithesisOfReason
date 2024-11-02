@@ -25,25 +25,54 @@ expand_mode = 1
 [node name="quit_button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.442
-anchor_bottom = 0.302
-offset_left = 94.0
-offset_top = 66.0
-offset_right = -312.184
-offset_bottom = -49.6961
+anchor_top = 0.783
+anchor_right = 0.215
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 24.616
+offset_right = -126.68
+offset_bottom = -36.0001
 text = "Quit"
 
 [node name="start_button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.361
-offset_left = 150.0
-offset_top = 66.0
-offset_right = -114.0
-offset_bottom = -37.9281
+anchor_right = 0.468
+anchor_bottom = 0.333
+offset_left = 18.0
+offset_top = 26.0
+offset_right = -209.136
+offset_bottom = -59.7841
 text = "Start"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.466
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 39.168
+offset_top = 84.0
+offset_right = -33.0
+offset_bottom = -85.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.492793, 0.38062, 0.554611, 1)
+theme_override_colors/font_shadow_color = Color(0.410491, 0.892581, 0.668836, 1)
+theme_override_font_sizes/italics_font_size = 22
+theme_override_font_sizes/normal_font_size = 21
+theme_override_font_sizes/bold_font_size = 17
+bbcode_enabled = true
+text = "[center][b][wave][shake]The horrible thing is to be forced to love your chains, despite knowing how tight they are[/shake][/wave][/b]
+
+[tornado]The terrifying thing is to be out, so far in to the void, that you have no context for your very identity[/tornado]
+
+[wave]The beautiful thing is to console yourself with the facsimiles of sympathy removed from empathy[/wave]
+
+[shake]The honest thing is to say, out loud, that you believe all contradictory things[/shake]
+
+The viscious lie is that all these things are image negatives of the void
+"
 
 [connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="start_button" to="." method="_on_start_button_pressed"]

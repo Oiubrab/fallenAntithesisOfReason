@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cbu5jbn1p4i50"]
+[gd_scene load_steps=15 format=3 uid="uid://cbu5jbn1p4i50"]
 
 [ext_resource type="PackedScene" uid="uid://bd8b7if2ibaw6" path="res://character.tscn" id="1_0rx4w"]
 [ext_resource type="Script" path="res://main.gd" id="1_5bfp1"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bh2lqwtxil2un" path="res://maurauder.tscn" id="2_fpm6u"]
 [ext_resource type="Texture2D" uid="uid://3yk3mmnjni2j" path="res://images/wall.webp" id="4_5ylrw"]
 [ext_resource type="FontFile" uid="uid://mh3qgnoyycbf" path="res://fonts/SixtyfourConvergence-Regular-VariableFont_BLED,SCAN,XELA,YELA.ttf" id="6_8grsv"]
+[ext_resource type="Texture2D" uid="uid://dp8uf33q4fmyn" path="res://images/hud_pannel.png" id="6_qqwrr"]
 [ext_resource type="Texture2D" uid="uid://bobhusr5hxue2" path="res://images/swampy_jungle2.webp" id="7_h346f"]
 [ext_resource type="Texture2D" uid="uid://b2xhwh2ymjnd3" path="res://images/swampy_jungle3.webp" id="8_gbcm1"]
 
@@ -20,6 +21,9 @@ size = Vector2(20, 648)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u3rje"]
 size = Vector2(1152, 20)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3n5tb"]
+texture = ExtResource("6_qqwrr")
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_5bfp1")
@@ -103,38 +107,39 @@ region_rect = Rect2(1.73474, 849.255, 1023.41, 89.3101)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Label" type="Label" parent="CanvasLayer"]
-anchors_preset = -1
-anchor_left = 0.009
-anchor_top = 0.015
-anchor_right = 0.065
-anchor_bottom = 0.083
-offset_left = 10.632
-offset_top = 10.28
-offset_right = 90.12
-offset_bottom = -10.784
-theme_override_colors/font_color = Color(0.771743, 0.332321, 0.500433, 1)
-theme_override_colors/font_shadow_color = Color(0.372466, 0.19557, 0.164163, 1)
-theme_override_fonts/font = ExtResource("6_8grsv")
-text = "Health: 5"
-
-[node name="Panel" type="Panel" parent="CanvasLayer/Label"]
-layout_mode = 1
+[node name="Panel" type="Panel" parent="CanvasLayer"]
 anchors_preset = -1
 anchor_left = -0.076
 anchor_top = -0.435
 anchor_right = 1.097
 anchor_bottom = 1.565
-offset_left = -9.056
-offset_top = -9.995
-offset_right = -8.968
-offset_bottom = -9.995
+offset_left = 97.552
+offset_top = 291.88
+offset_right = -959.744
+offset_bottom = -764.12
+theme_override_styles/panel = SubResource("StyleBoxTexture_3n5tb")
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.009
+anchor_top = 0.015
+anchor_right = 0.065
+anchor_bottom = 0.083
+offset_left = 83.354
+offset_top = 42.4
+offset_right = 211.338
+offset_bottom = 42.08
+theme_override_colors/font_color = Color(0.771743, 0.332321, 0.500433, 1)
+theme_override_colors/font_shadow_color = Color(0.372466, 0.19557, 0.164163, 1)
+theme_override_fonts/font = ExtResource("6_8grsv")
+text = "Health: 5"
 
 [node name="background2" type="Sprite2D" parent="."]
 light_mask = 524288
 visibility_layer = 524288
 z_index = -2
-position = Vector2(2992.5, 323.5)
+position = Vector2(2992, 324)
 scale = Vector2(0.517299, 0.612305)
 texture = ExtResource("7_h346f")
 
