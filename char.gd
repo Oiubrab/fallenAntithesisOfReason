@@ -6,6 +6,7 @@ var damage_cooldown = 0.5  # Cooldown time in seconds
 var cooldown_timer = 0.0  # Timer for cooldown
 var pushback_force = 800  # Define the pushback force here
 var max_height = 350 # Stop the character from moving above the ground
+var max_health = 5  # Maximum health
 
 func _ready():
 	update_health_display()
@@ -25,6 +26,12 @@ func _process(delta):
 	input_vector = input_vector.normalized() * speed
 	velocity = input_vector
 
+	# Check if moving right or left and flip the sprite
+	if velocity.x > 0:
+		$Sprite2D.flip_h = false  # Normal orientation when moving right
+	elif velocity.x < 0:
+		$Sprite2D.flip_h = true  # Flips sprite horizontally when moving left
+
 	# Call move_and_slide() after setting velocity
 	move_and_collide(velocity * delta)
 
@@ -40,6 +47,11 @@ func decrease_health():
 		cooldown_timer = damage_cooldown  # Reset the cooldown timer
 		if health <= 0:
 			game_over()
+
+func increase_health():
+	if health<max_health:
+		health += 1
+		update_health_display()
 
 # Function to update the health label in the UI
 func update_health_display():

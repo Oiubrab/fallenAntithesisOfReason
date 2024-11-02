@@ -37,7 +37,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="char"]
-zoom = Vector2(3, 3)
+zoom = Vector2(2.7, 2.7)
 position_smoothing_enabled = true
 
 [node name="maurauder" parent="." instance=ExtResource("2_fpm6u")]

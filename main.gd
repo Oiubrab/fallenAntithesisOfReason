@@ -4,8 +4,26 @@ var patrol_scene = preload("res://patrol.tscn")  # Path to your patrol scene
 var patrols = []  # Array to store patrol instances
 var player
 var marauder
+var repeater_scene = preload("res://repeater.tscn")
+
+func spawn_repeater():
+	# Create an instance of the Repeater
+	var repeater_instance = repeater_scene.instantiate()
+
+	# Randomly set its position within the specified bounds
+	var x_position = randi_range(0, 3456)
+	var y_position = randi_range(384, 560)
+	repeater_instance.position = Vector2(x_position, y_position)
+
+	# Add the repeater instance to the "Repeater" group
+	repeater_instance.add_to_group("Repeater")
+
+	# Add the instance to the scene tree
+	add_child(repeater_instance)
 
 func _ready():
+	spawn_repeater()
+
 	# Get references to player and marauder
 	player = $char  # Adjust this if the player node's name is different
 	marauder = $maurauder  # Adjust this to your marauder node

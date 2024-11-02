@@ -24,10 +24,10 @@ func _process(delta):
 
 	# Check if a collision happened
 	if collision:
-		print("Collision detected:")
-		print("Position:", collision.get_position())  # The point of collision
-		print("Normal:", collision.get_normal())      # The normal of the collision
-		print("Collider:", collision.get_collider())  # The object we collided with
+		#print("Collision detected:")
+		#print("Position:", collision.get_position())  # The point of collision
+		#print("Normal:", collision.get_normal())      # The normal of the collision
+		#print("Collider:", collision.get_collider())  # The object we collided with
 
 		var pushback_force = get_node("../char").pushback_force
 
