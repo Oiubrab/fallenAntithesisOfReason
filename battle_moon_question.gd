@@ -5,6 +5,7 @@ var patrols = []  # Array to store patrol instances
 var player
 var marauder
 var repeater_scene = preload("res://repeater.tscn")
+var char_max_height = 350
 
 enum battle_states {
 	RAIDERHUNTER,

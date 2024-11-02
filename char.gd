@@ -5,11 +5,12 @@ var health = 5  # Starting health
 var damage_cooldown = 0.5  # Cooldown time in seconds
 var cooldown_timer = 0.0  # Timer for cooldown
 var pushback_force = 800  # Define the pushback force here
-var max_height = 350 # Stop the character from moving above the ground
+var max_height = 0 # Stop the character from moving above the ground
 var max_health = 5  # Maximum health
 
 func _ready():
 	update_health_display()
+	max_height = get_node("/root/main").char_max_height
 
 func _process(delta):
 	var input_vector = Vector2()
