@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://7qkkfblwwllu"]
+
+[ext_resource type="Texture2D" uid="uid://58q35y1kx1iy" path="res://images/creatures/folgim.png" id="1_1fuww"]
+[ext_resource type="Script" path="res://folgim.gd" id="1_w44dt"]
+
+[node name="Folgim" type="CharacterBody2D"]
+position = Vector2(0, -16)
+script = ExtResource("1_w44dt")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(800, 312)
+scale = Vector2(0.453957, 0.465812)
+texture = ExtResource("1_1fuww")
+region_enabled = true
+region_rect = Rect2(328.952, 60.9876, 695.048, 702.669)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(648, 448, 672, 440, 664, 424, 672, 384, 688, 360, 680, 336, 696, 304, 712, 320, 744, 288, 752, 272, 752, 256, 744, 240, 744, 208, 768, 176, 792, 168, 816, 184, 824, 184, 832, 200, 840, 216, 840, 240, 824, 256, 816, 264, 864, 296, 896, 296, 896, 272, 904, 264, 912, 272, 920, 280, 912, 304, 896, 320, 864, 320, 896, 336, 928, 352, 944, 376, 952, 400, 952, 416, 936, 440, 920, 456, 648, 456)
