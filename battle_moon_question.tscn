@@ -148,7 +148,7 @@ offset_right = 2.092
 offset_bottom = -0.0879669
 theme_override_colors/font_color = Color(0.69721, 0.931219, 1, 1)
 theme_override_fonts/font = ExtResource("8_ytir4")
-text = "Repeater 1: 10000"
+text = "Repeater 1:"
 
 [node name="repeater2_health_label" type="Label" parent="CanvasLayer/Panel"]
 layout_mode = 1
@@ -163,7 +163,7 @@ offset_right = 5.092
 offset_bottom = -6.25001
 theme_override_colors/font_color = Color(0.69721, 0.931219, 1, 1)
 theme_override_fonts/font = ExtResource("8_ytir4")
-text = "Repeater 2: 10000"
+text = "Repeater 2:"
 
 [node name="repeater3_health_label" type="Label" parent="CanvasLayer/Panel"]
 layout_mode = 1
@@ -178,7 +178,7 @@ offset_right = 5.092
 offset_bottom = 0.342026
 theme_override_colors/font_color = Color(0.69721, 0.931219, 1, 1)
 theme_override_fonts/font = ExtResource("8_ytir4")
-text = "Repeater 3: 10000"
+text = "Repeater 3:"
 
 [node name="status_label" type="Label" parent="CanvasLayer/Panel"]
 layout_mode = 1

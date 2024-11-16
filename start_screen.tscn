@@ -48,13 +48,14 @@ text = "Start"
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.466
+anchor_left = 0.524
+anchor_top = 0.323
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 39.168
-offset_top = 84.0
-offset_right = -33.0
-offset_bottom = -85.0
+anchor_bottom = 0.968
+offset_left = 0.351929
+offset_top = -0.304016
+offset_right = -5.0
+offset_bottom = -0.264038
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(0.492793, 0.38062, 0.554611, 1)
@@ -73,6 +74,16 @@ text = "[center][b][wave][shake]The horrible thing is to be forced to love your 
 
 The viscious lie is that all these things are image negatives of the void
 "
+metadata/_edit_group_ = true
+
+[node name="Panel" type="Panel" parent="RichTextLabel"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="start_button" to="." method="_on_start_button_pressed"]
