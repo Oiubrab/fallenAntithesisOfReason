@@ -1,34 +1,44 @@
-extends Control
+extends Node
 
-var dialogue_lines = []  # Stores the dialogue lines
-var current_index = 0  # Keeps track of the current dialogue line
-var is_active = false  # To track if the dialogue is ongoing
+@export var dialogue_label_path = "RichTextLabel"  # Path to the RichTextLabel
+@export var option_panel_path = "OptionPanel"  # Path to the panel for dialogue options
+@export var button_scene = preload("res://Button.tscn")  # Preloaded Button scene
 
-# Reference to the RichTextLabel
-@onready var text_label = $RichTextLabel  # Adjust path if needed
+@onready var dialogue_label = $RichTextLabel
+@onready var option_panel = $OptionPanel  # A VBoxContainer to hold option buttons
 
-func start_dialogue(lines: Array):
-	dialogue_lines = lines
-	current_index = 0
-	is_active = true
-	text_label.visible = true
-	update_text()
+# Function to start dialogue with options
+func start_dialogue_with_options(dialogue_lines: Array, options: Dictionary):
+	dialogue_label.text = ""
+	for child in option_panel.get_children():
+		option_panel.remove_child(child)
+		child.queue_free()  # Ensures the node is properly removed and freed from memory
+	_display_dialogue(dialogue_lines)
+	_create_option_buttons(options)
 
-func update_text():
-	if current_index < dialogue_lines.size():
-		text_label.bbcode_text = dialogue_lines[current_index]
-	else:
-		end_dialogue()
+# Function to display dialogue lines
+func _display_dialogue(dialogue_lines: Array):
+	for line in dialogue_lines:
+		dialogue_label.append_text(line + "\n")  # Appends each line of text
 
-func next_line():
-	if is_active:
-		current_index += 1
-		update_text()
 
-func end_dialogue():
-	text_label.visible = false
-	is_active = false
+# Function to create option buttons
+func _create_option_buttons(options: Dictionary):
+	for option_text in options.keys():
+		var button = button_scene.instantiate()
+		button.text = option_text
 
-func _input(event):
-	if is_active and event.is_action_pressed("ui_accept"):  # Replace "ui_accept" with your desired input
-		next_line()
+		# Use Callable with arguments to pass the selected response
+		button.connect("pressed", Callable(self, "_on_option_selected").bind(options[option_text]))
+
+		option_panel.add_child(button)
+
+
+# Function to handle selected options
+func _on_option_selected(response: Array):
+	# Update the dialogue with the selected response
+	dialogue_label.text = ""  # Clear current dialogue
+	_display_dialogue(response)
+	for child in option_panel.get_children():
+		option_panel.remove_child(child)
+		child.queue_free()  # Ensures the node is properly removed and freed from memory
