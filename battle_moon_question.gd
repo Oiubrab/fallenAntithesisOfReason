@@ -79,6 +79,37 @@ func _process(_delta):
 		battle_state = battle_states.REINFORCEMENT
 		status.text = "Status: Reinforcement"
 
+# Function to fade out the music
+func fade_out(fade_duration: float = 2.0) -> void:
+	var steps = 80  # Number of fade steps
+	var wait_time = fade_duration / steps
+	var alpha_step = 1.0 / steps
+	var volume_step = 80 / steps  # Assuming initial volume is 0 dB
+
+	# Get the MusicPlayer and ColorRect nodes
+	var music_player = $char/BattleMusic
+	var color_rect = $FadeOut  # Assuming you added a ColorRect named "ColorRect"
+
+	# Pause the game
+	get_tree().paused = true
+
+	for i in range(steps):
+		await get_tree().create_timer(wait_time).timeout
+		# Decrease music volume
+		music_player.volume_db -= volume_step
+		# Increase screen fade alpha
+		var color = color_rect.color
+		color.a += alpha_step
+		color_rect.color = color
+
+	# Stop the music
+	music_player.stop()
+	# Ensure the screen is fully black
+	color_rect.color = Color(0, 0, 0, 1.0)
+
+
 
 func _on_survival_timer_timeout() -> void:
+	await fade_out(2.0)  # Fade out the music over 2 seconds
+	get_tree().paused = false  # Unpause the game
 	get_tree().change_scene_to_file("res://inner_sanctum.tscn")  # Change to your main game scene

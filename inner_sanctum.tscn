@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3om1vnhqfefi"]
+[gd_scene load_steps=9 format=3 uid="uid://d3om1vnhqfefi"]
 
 [ext_resource type="Texture2D" uid="uid://bjt8xro4nr6oo" path="res://images/background/inner_sanctum.jpeg" id="1_3wawl"]
 [ext_resource type="Script" path="res://inner_sanctum.gd" id="1_rdavp"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://7qkkfblwwllu" path="res://folgim.tscn" id="4_p1an2"]
 [ext_resource type="Script" path="res://folgim_dialouge.gd" id="5_qxc0v"]
 [ext_resource type="Script" path="res://dialouge_manager.gd" id="6_ogn5n"]
+[ext_resource type="AudioStream" uid="uid://bon6anku7jypp" path="res://music/TheGardenOfHeathen.mp3" id="7_yneqd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5rbh4"]
 size = Vector2(232, 288)
@@ -62,5 +63,10 @@ anchor_top = 0.75
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -1.52588e-05
+
+[node name="SanctumMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_yneqd")
+autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="Folgim/FolgimDialouge" to="Folgim/FolgimDialouge" method="_on_body_entered"]

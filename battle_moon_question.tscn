@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cbu5jbn1p4i50"]
+[gd_scene load_steps=17 format=3 uid="uid://cbu5jbn1p4i50"]
 
 [ext_resource type="Script" path="res://battle_moon_question.gd" id="1_mop6u"]
 [ext_resource type="Texture2D" uid="uid://daep3x451f666" path="res://images/background/swampy_jungle.webp" id="2_w28ke"]
@@ -10,6 +10,7 @@
 [ext_resource type="FontFile" uid="uid://dhn881pjuqics" path="res://fonts/montreal/Montreal-Bold.ttf" id="8_ytir4"]
 [ext_resource type="Texture2D" uid="uid://bobhusr5hxue2" path="res://images/background/swampy_jungle2.webp" id="9_537ys"]
 [ext_resource type="Texture2D" uid="uid://b2xhwh2ymjnd3" path="res://images/background/swampy_jungle3.webp" id="10_qd7cs"]
+[ext_resource type="AudioStream" uid="uid://kynbk2rgryou" path="res://music/ThereWillBeConsequences.mp3" id="11_5i1j7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5rnu0"]
 size = Vector2(20, 647)
@@ -43,6 +44,11 @@ collision_mask = 3
 [node name="Camera2D" type="Camera2D" parent="char"]
 zoom = Vector2(2.7, 2.7)
 position_smoothing_enabled = true
+
+[node name="BattleMusic" type="AudioStreamPlayer2D" parent="char"]
+process_mode = 3
+stream = ExtResource("11_5i1j7")
+autoplay = true
 
 [node name="maurauder" parent="." groups=["threnss"] instance=ExtResource("4_qtwcn")]
 position = Vector2(832, 496)
@@ -108,6 +114,7 @@ region_rect = Rect2(1.73474, 849.255, 1023.41, 89.3101)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
+z_as_relative = false
 anchors_preset = -1
 anchor_left = -0.076
 anchor_top = -0.435
@@ -269,8 +276,17 @@ region_enabled = true
 region_rect = Rect2(1.73474, 849.255, 1023.41, 89.3101)
 
 [node name="survival_timer" type="Timer" parent="."]
-wait_time = 180.0
+wait_time = 5.0
 one_shot = true
 autostart = true
+
+[node name="FadeOut" type="ColorRect" parent="."]
+top_level = true
+z_index = 10
+offset_left = -10.0
+offset_top = -12.0
+offset_right = 3468.0
+offset_bottom = 659.0
+color = Color(0, 0, 0, 0)
 
 [connection signal="timeout" from="survival_timer" to="." method="_on_survival_timer_timeout"]
