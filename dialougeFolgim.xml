@@ -1,0 +1,35 @@
+<dialogue>
+    <node id="1">
+        <text>Welcome to my inner sanctum, Litta.</text>
+        <options>
+            <option next="2">What is this place?</option>
+            <option next="3">Who are you?</option>
+        </options>
+    </node>
+    <node id="2">
+        <text>This is a realm of thought and possibility.</text>
+        <options>
+            <option next="4">Tell me more.</option>
+            <option next="1">Go back.</option>
+        </options>
+    </node>
+    <node id="3">
+        <text>I am Folgim, ruler of this domain.</text>
+        <options>
+            <option next="5">Why am I here?</option>
+            <option next="1">Go back.</option>
+        </options>
+    </node>
+    <node id="4">
+        <text>The void beyond holds the truth, but few dare to look.</text>
+        <options>
+            <option next="1">Thank you.</option>
+        </options>
+    </node>
+    <node id="5">
+        <text>You are here to seek answers, but you must ask the right questions.</text>
+        <options>
+            <option next="1">I understand.</option>
+        </options>
+    </node>
+</dialogue>

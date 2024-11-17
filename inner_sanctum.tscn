@@ -43,7 +43,7 @@ offset_bottom = 256.0
 script = ExtResource("6_ogn5n")
 metadata/_edit_group_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="DialougeManager"]
+[node name="DialogueLabel" type="RichTextLabel" parent="DialougeManager"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
