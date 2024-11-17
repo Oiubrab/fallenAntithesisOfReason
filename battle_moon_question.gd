@@ -6,6 +6,7 @@ var player
 var marauder
 var repeater_scene = preload("res://repeater.tscn")
 var char_max_height = 350
+var screen_width = 1152
 
 enum battle_states {
 	RAIDERHUNTER,
@@ -22,7 +23,7 @@ func spawn_repeaters():
 		var repeater_instance = repeater_scene.instantiate()
 		repeater_instance.name = "repeater" + str(i + 1)  # Assign a predictable name: repeater1, repeater2, repeater3
 		# Randomly set its position within the specified bounds
-		var x_position = randi_range(0, 3456)
+		var x_position = randi_range(i*screen_width, i*screen_width+screen_width)
 		var y_position = randi_range(384, 560)
 		repeater_instance.position = Vector2(x_position, y_position)
 

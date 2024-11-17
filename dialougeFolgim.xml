@@ -1,35 +1,35 @@
 <dialogue>
     <node id="1">
-        <text>Welcome to my inner sanctum, Litta.</text>
+        <text>[color=lightsalmon]Litta:[/color] I have fulfilled your wishes, Folgim. The Threnss threat on Hjardel has been defeated</text>
         <options>
-            <option next="2">What is this place?</option>
-            <option next="3">Who are you?</option>
+            <option next="2">Were you able to save all my repeaters?</option>
+            <option next="3">How do you feel about your mission?</option>
         </options>
     </node>
     <node id="2">
-        <text>This is a realm of thought and possibility.</text>
+        <text>[color=lightsalmon]Litta:[/color] Yes Folgim, your repeaters are secure</text>
         <options>
             <option next="4">Tell me more.</option>
-            <option next="1">Go back.</option>
+            <option next="1">Go back</option>
         </options>
     </node>
     <node id="3">
-        <text>I am Folgim, ruler of this domain.</text>
+        <text>[color=lightsalmon]Litta:[/color] The battle was fierce. Your control over me provides me a certain assurity that I am going to succeed. But there was an element, of communication between the Threnss, an awareness of their own mental cages</text>
         <options>
-            <option next="5">Why am I here?</option>
-            <option next="1">Go back.</option>
+            <option next="5">Was that difficult for you to countenance? Did it awaken something within you?</option>
+            <option next="1">Go back</option>
         </options>
     </node>
     <node id="4">
-        <text>The void beyond holds the truth, but few dare to look.</text>
+        <text>[color=lightsalmon]Litta:[/color] I was able to save all the repeaters, at great cost</text>
         <options>
-            <option next="1">Thank you.</option>
+            <option next="1">Thank you</option>
         </options>
     </node>
     <node id="5">
-        <text>You are here to seek answers, but you must ask the right questions.</text>
+        <text>[color=lightsalmon]Litta:[/color] There is nothing that can stop me from fulfilling your wishes. I love you, Folgim. No, more than that. I am you</text>
         <options>
-            <option next="1">I understand.</option>
+            <option next="1">I know</option>
         </options>
     </node>
 </dialogue>
