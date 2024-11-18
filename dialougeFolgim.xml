@@ -1,35 +1,42 @@
 <dialogue>
-    <node id="1">
-        <text>[color=lightsalmon]Litta:[/color] I have fulfilled your wishes, Folgim. The Threnss threat on Hjardel has been defeated</text>
-        <options>
-            <option next="2">Were you able to save all my repeaters?</option>
-            <option next="3">How do you feel about your mission?</option>
-        </options>
-    </node>
-    <node id="2">
-        <text>[color=lightsalmon]Litta:[/color] Yes Folgim, your repeaters are secure</text>
-        <options>
-            <option next="4">Tell me more.</option>
-            <option next="1">Go back</option>
-        </options>
-    </node>
-    <node id="3">
-        <text>[color=lightsalmon]Litta:[/color] The battle was fierce. Your control over me provides me a certain assurity that I am going to succeed. But there was an element, of communication between the Threnss, an awareness of their own mental cages</text>
-        <options>
-            <option next="5">Was that difficult for you to countenance? Did it awaken something within you?</option>
-            <option next="1">Go back</option>
-        </options>
-    </node>
-    <node id="4">
-        <text>[color=lightsalmon]Litta:[/color] I was able to save all the repeaters, at great cost</text>
-        <options>
-            <option next="1">Thank you</option>
-        </options>
-    </node>
-    <node id="5">
-        <text>[color=lightsalmon]Litta:[/color] There is nothing that can stop me from fulfilling your wishes. I love you, Folgim. No, more than that. I am you</text>
-        <options>
-            <option next="1">I know</option>
-        </options>
-    </node>
+	<node id="1">
+		<text>[color=lightsalmon]Litta:[/color] I have fulfilled your wishes, Folgim. The Threnss threat on Hjardel has been defeated</text>
+		<options>
+			<option next="2">Were you able to save all my repeaters?</option>
+			<option next="3">How do you feel about your mission?</option>
+		</options>
+	</node>
+	<node id="2">
+		<text>[color=lightsalmon]Litta:[/color] Yes Folgim, your repeaters are secure</text>
+		<options>
+			<option next="4">Tell me more.</option>
+			<option next="1">Go back</option>
+		</options>
+	</node>
+	<node id="3">
+		<text>[color=lightsalmon]Litta:[/color] The battle was fierce. Your control over me provides me a certain assurity that I am going to succeed. But there was an element, of communication between the Threnss, an awareness of their own mental cages</text>
+		<options>
+			<option next="5">Was that difficult for you to countenance? Did it awaken something within you?</option>
+			<option next="1">Go back</option>
+		</options>
+	</node>
+	<node id="4">
+		<text>[color=lightsalmon]Litta:[/color] I was able to save all the repeaters, at great cost</text>
+		<options>
+			<option next="1">Thank you</option>
+		</options>
+	</node>
+	<node id="5">
+		<text>[color=lightsalmon]Litta:[/color] There is nothing that can stop me from fulfilling your wishes. I love you, Folgim. No, more than that. I am you</text>
+		<options>
+			<option next="1">I know</option>
+			<option next="6">But that is the nature of my dominion. That is the nature of the Aksjub. Our dominion is control. You already know this</option>
+		</options>
+	</node>
+	<node id="6">
+		<text>[color=lightsalmon]Litta:[/color] But there is worth in saying it out loud, no? Worth in reinforcing the strength of the tether you have placed within me with the sounds of my species.</text>
+		<options>
+			<option next="1">Your loyalty, your love, I may generate within you, but what you show me from the emergent qualities within you, it feeds me</option>
+		</options>
+	</node>
 </dialogue>

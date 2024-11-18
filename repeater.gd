@@ -27,7 +27,7 @@ func decrease_health(amount: int = 1):
 # Optional: Method to display health
 func update_health_display():
 	# Add code to update health display (if you have a UI for it)
-	var label = get_node("/root/main/CanvasLayer/Panel/" + str(self.name) + "_health_label")
+	var label = get_node("/root/main/CanvasLayer/AspectRatioContainer/Panel/" + str(self.name) + "_health_label")
 	label.text = "Repeater " + str(self.name)[-1] + ": " + str(health)
 
 # Method to handle what happens when health is zero

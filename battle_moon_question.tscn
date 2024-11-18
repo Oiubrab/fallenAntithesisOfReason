@@ -51,7 +51,7 @@ stream = ExtResource("11_5i1j7")
 autoplay = true
 
 [node name="maurauder" parent="." groups=["threnss"] instance=ExtResource("4_qtwcn")]
-position = Vector2(832, 496)
+position = Vector2(840, 480)
 collision_layer = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -113,20 +113,16 @@ region_rect = Rect2(1.73474, 849.255, 1023.41, 89.3101)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Panel" type="Panel" parent="CanvasLayer"]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="CanvasLayer"]
+offset_right = 352.0
+offset_bottom = 328.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/AspectRatioContainer"]
 z_as_relative = false
-anchors_preset = -1
-anchor_left = -0.076
-anchor_top = -0.435
-anchor_right = 1.097
-anchor_bottom = 1.565
-offset_left = 97.552
-offset_top = 291.88
-offset_right = -959.744
-offset_bottom = -750.12
+layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_3n5tb")
 
-[node name="char_health_label" type="Label" parent="CanvasLayer/Panel"]
+[node name="char_health_label" type="Label" parent="CanvasLayer/AspectRatioContainer/Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.293
@@ -142,7 +138,7 @@ theme_override_colors/font_shadow_color = Color(0.372466, 0.19557, 0.164163, 1)
 theme_override_fonts/font = ExtResource("7_iogna")
 text = "Health: 5"
 
-[node name="repeater1_health_label" type="Label" parent="CanvasLayer/Panel"]
+[node name="repeater1_health_label" type="Label" parent="CanvasLayer/AspectRatioContainer/Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.265
@@ -157,7 +153,7 @@ theme_override_colors/font_color = Color(0.69721, 0.931219, 1, 1)
 theme_override_fonts/font = ExtResource("8_ytir4")
 text = "Repeater 1:"
 
-[node name="repeater2_health_label" type="Label" parent="CanvasLayer/Panel"]
+[node name="repeater2_health_label" type="Label" parent="CanvasLayer/AspectRatioContainer/Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.265
@@ -172,7 +168,7 @@ theme_override_colors/font_color = Color(0.69721, 0.931219, 1, 1)
 theme_override_fonts/font = ExtResource("8_ytir4")
 text = "Repeater 2:"
 
-[node name="repeater3_health_label" type="Label" parent="CanvasLayer/Panel"]
+[node name="repeater3_health_label" type="Label" parent="CanvasLayer/AspectRatioContainer/Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.265
@@ -187,7 +183,7 @@ theme_override_colors/font_color = Color(0.69721, 0.931219, 1, 1)
 theme_override_fonts/font = ExtResource("8_ytir4")
 text = "Repeater 3:"
 
-[node name="status_label" type="Label" parent="CanvasLayer/Panel"]
+[node name="status_label" type="Label" parent="CanvasLayer/AspectRatioContainer/Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.265
@@ -276,17 +272,17 @@ region_enabled = true
 region_rect = Rect2(1.73474, 849.255, 1023.41, 89.3101)
 
 [node name="survival_timer" type="Timer" parent="."]
-wait_time = 180.0
+wait_time = 5.0
 one_shot = true
 autostart = true
 
 [node name="FadeOut" type="ColorRect" parent="."]
-top_level = true
 z_index = 10
 offset_left = -10.0
 offset_top = -12.0
 offset_right = 3468.0
 offset_bottom = 659.0
 color = Color(0, 0, 0, 0)
+metadata/_edit_lock_ = true
 
 [connection signal="timeout" from="survival_timer" to="." method="_on_survival_timer_timeout"]
