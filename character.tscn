@@ -1,22 +1,76 @@
-[gd_scene load_steps=3 format=3 uid="uid://bd8b7if2ibaw6"]
+[gd_scene load_steps=8 format=3 uid="uid://bd8b7if2ibaw6"]
 
 [ext_resource type="Script" path="res://char.gd" id="1_hp67h"]
-[ext_resource type="Texture2D" uid="uid://dffsf7v2nr7yf" path="res://images/creatures/Litta.png" id="2_5451j"]
+[ext_resource type="Texture2D" uid="uid://dffsf7v2nr7yf" path="res://images/creatures/litta/Litta.png" id="2_5451j"]
+[ext_resource type="Texture2D" uid="uid://cmvrkr7ypfg3t" path="res://images/creatures/litta/LittaFiring.png" id="3_08vlx"]
+[ext_resource type="Texture2D" uid="uid://c8i2tnbcypqgo" path="res://images/creatures/litta/getimg_ai_img-RVLsWTGdDNg2qJUJaMKor.png" id="4_54ung"]
+[ext_resource type="Texture2D" uid="uid://baf63kd3akls5" path="res://images/creatures/litta/LittaFiringCrouched.png" id="5_e4588"]
+[ext_resource type="Texture2D" uid="uid://d111gsi07ubyd" path="res://images/creatures/litta/LittaCrouched.png" id="6_dmd2v"]
+[ext_resource type="Texture2D" uid="uid://bvdx76t1vdt2v" path="res://images/creatures/litta/LittaLookingUp.png" id="7_iwd6j"]
 
 [node name="Litta" type="CharacterBody2D"]
-position = Vector2(238, 447)
+position = Vector2(242, 343)
 script = ExtResource("1_hp67h")
-metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="standing" type="Sprite2D" parent="."]
 position = Vector2(-7.62939e-06, 1.52588e-05)
 scale = Vector2(0.146119, 0.129)
 texture = ExtResource("2_5451j")
 region_enabled = true
 region_rect = Rect2(0.372681, 24, 438.578, 1000.31)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="standingCollision" type="CollisionPolygon2D" parent="."]
 position = Vector2(-2, 8.99998)
 scale = Vector2(2.96491, 5.58252)
 build_mode = 1
 polygon = PackedVector2Array(-3.44, -5.06173, -4.4, -3.99177, -4.88, -3.74486, -5.2, -3.25103, -7.44, -1.85185, -7.76, -1.60494, -7.12, -0.452675, -7.28, -0.123457, -7.6, 0.041151, -7.92, -0.452675, -8.24, -0.123457, -7.76, 0.288065, -7.92, 0.370369, -8.24, 0.370369, -8.4, 0.288065, -8.56, 0.452675, -8.88, 0.534979, -9.68, -0.041153, -9.68, -0.370371, -9.84, -0.781893, -9.52, -0.946503, -9.52, -1.44033, -9.2, -1.85185, -9.36, -2.18107, -8.08, -3.90947, -6.96, -4.23868, -5.52, -6.62551, -4.72, -7.11934, -4.08, -7.20165, -3.44, -7.11934, -2.48, -7.53086, -1.04, -7.86008, -1.2, -9.09465, -0.720001, -9.67078, 0.239998, -9.9177, 1.2, -9.9177, 2, -9.83539, 2.48, -9.58848, 2.8, -9.17696, 2.64, -8.76543, 2.64, -8.02469, 2.32, -7.77778, 3.44, -7.28395, 3.92, -7.20165, 5.2, -7.11934, 6.16, -6.62551, 6.48, -5.96708, 6.32, -5.72017, 7.12, -5.14403, 7.44, -5.14403, 9.52, -3.33333, 9.36, -3.25103, 9.04, -3.41564, 9.36, -2.7572, 9.2, -2.59259, 9.68, -2.18107, 9.36, -1.60494, 8.4, -1.27572, 7.92, -1.27572, 7.6, -1.44033, 7.92, -2.26337, 7.28, -2.01646, 6.96, -2.01646, 6.96, -2.18107, 7.76, -3.00412, 6.16, -3.74486, 5.52, -4.32099, 5.68, -4.5679, 5.04, -4.89712, 4.56, -4.65021, 4.08, -3.41564, 4.56, -2.92181, 5.2, -2.34568, 5.68, -1.93416, 5.68, -0.288067, 6, 0.041151, 4.4, 3.66255, 4.56, 3.82716, 3.92, 6.70782, 4.4, 7.77778, 3.92, 8.107, 3.6, 8.2716, 2.48, 8.1893, 2.64, 8.93004, 2.64, 9.58848, 1.52, 9.75309, 0.079998, 9.42387, -0.560001, 8.2716, -0.240002, 7.86008, -2.16, 4.32099, -1.84, 4.23868, -4.24, 0.617283, -4.24, -1.60494, -3.44, -2.51029, -2.96, -3.00412, -2.16, -3.16872)
+
+[node name="standingFiring" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(7.62939e-06, 0)
+scale = Vector2(0.05, 0.056)
+texture = ExtResource("3_08vlx")
+
+[node name="lookingUpFiring" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(16.1189, -13)
+scale = Vector2(0.0962064, 0.0808987)
+texture = ExtResource("4_54ung")
+
+[node name="crouchingFiring" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1.31249, 30)
+scale = Vector2(0.0842014, 0.0746094)
+texture = ExtResource("5_e4588")
+
+[node name="crouching" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-3.33786e-06, 22)
+scale = Vector2(0.0791667, 0.078125)
+texture = ExtResource("6_dmd2v")
+
+[node name="lookingUp" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(5, 4.00001)
+scale = Vector2(0.0667017, 0.0596745)
+texture = ExtResource("7_iwd6j")
+
+[node name="crouchingCollision" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(-18, 61, -16, 51, -24, 46, -25, 37, -21, 32, -21, 24, -15, 13, -8, 2, 0, 2, 4, -7, 11, -7, 14, -3, 14, 2, 14, 8, 13, 11, 11, 12, 12, 17, 12, 20, 10, 23, 12, 25, 18, 29, 23, 31, 25, 34, 25, 38, 22, 41, 19, 43, 14, 46, 13, 48, 15, 50, 18, 51, 21, 53, 21, 55, 19, 56, 13, 56, 5, 53, 4, 49, 10, 42, 7, 42, -1, 43, -1, 48, 0, 57, 6, 63, 0, 70, -5, 69, -7, 67, -6, 57, -8, 52, -10, 61, -13, 63)
+
+[node name="lookingUpCollision" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(-16, 53, -12, 34, -11, 26, -13, 15, -16, -1, -11, -25, -13, -36, -12, -42, 3, -47, 11, -38, 11, -33, 7, -33, 5, -28, 17, -18, 17, -13, 16, -6, 32, 4, 35, 8, 34, 11, 15, 1, 15, 12, 16, 17, 14, 27, 16, 30, 12, 37, 11, 46, 18, 53, 18, 56, 15, 57, 3, 51, 2, 45, 4, 27, -3, 42, -6, 52, -1, 66, -3, 68, -7, 68)
+
+[node name="standingFiringCollision" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(-26, 54, -21, 49, -21, 36, -21, 27, -27, 21, -33, 13, -33, -1, -26, -5, -29, -16, -32, -25, -27, -34, -20, -38, -15, -45, -9, -44, -6, -40, -6, -31, -2, -29, 7, -33, 32, -36, 32, -27, 20, -26, 18, -21, 10, -19, 6, -16, -1, -18, -5, -16, -4, -12, -8, -9, -3, 11, -3, 20, -10, 48, -11, 55, -9, 59, -4, 61, -4, 64, -8, 66, -17, 63, -21, 64, -25, 63)
+
+[node name="crouchingFiringCollision" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(-25, 45, -20, 27, -20, 16, -12, 3, -7, 2, -6, -5, -2, -7, 4, -7, 8, -2, 7, 4, 5, 8, 10, 5, 25, 7, 26, 15, 21, 14, 19, 20, 13, 19, 4, 29, 0, 28, -1, 31, 15, 30, 19, 33, 20, 39, 2, 55, 3, 59, 7, 60, 8, 64, 4, 65, -14, 62, -14, 56, -10, 51, -17, 53, -22, 52)
+
+[node name="lookingUpFiringCollision" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(-18, 54, -12, 28, -16, 1, -13, -14, -11, -30, -14, -43, -4, -47, 2, -48, 7, -44, 13, -37, 20, -46, 18, -50, 26, -59, 24, -62, 46, -91, 52, -90, 54, -85, 36, -57, 39, -54, 15, -23, 19, -17, 17, -6, 16, 3, 17, 13, 15, 27, 17, 29, 13, 36, 11, 45, 20, 54, 16, 57, 8, 53, 2, 49, 4, 28, -7, 52, -1, 65, -2, 68, -8, 68)

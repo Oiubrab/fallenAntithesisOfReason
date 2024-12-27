@@ -32,6 +32,6 @@ func update_health_display():
 
 # Method to handle what happens when health is zero
 func destroy_repeater():
-	var label = get_node("/root/main/CanvasLayer/Panel/" + str(self.name) + "_health_label")
+	var label = get_node("/root/main/CanvasLayer/AspectRatioContainer/Panel/" + str(self.name) + "_health_label")
 	label.text = "Repeater " + str(self.name)[-1] + ": gone"
 	queue_free()  # Removes this repeater instance from the scene

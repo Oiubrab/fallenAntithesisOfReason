@@ -23,19 +23,9 @@ func load_dialogue_file(file_path: String):
 		var current_option_text = ""  # Track the current option text (for options)
 		var current_subnode_type = ""
 		
-		print(XMLParser.NODE_ELEMENT)
-		print(XMLParser.NODE_TEXT)
-		print(XMLParser.NODE_ELEMENT_END)
 
 		
 		while xml.read() == OK:
-			print("\nstart node")
-			print("get_node_name: " + xml.get_node_name())
-			print("get_attribute_value 0: " + xml.get_attribute_value(0))
-			print("get_attribute_value 1: " + xml.get_attribute_value(1))
-			print("get_node_data: " + xml.get_node_data())
-			print("get_node_type: " + str(xml.get_node_type()))
-			print("end node")
 			# Handle NODE_ELEMENT type
 			if xml.get_node_type() == XMLParser.NODE_ELEMENT:
 				if xml.get_node_name() == "node":
