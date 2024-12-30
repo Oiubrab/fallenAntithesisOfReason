@@ -59,6 +59,10 @@ func spawn_patrol():
 func _ready():
 	spawn_repeaters()
 	spawn_patrol()
+	
+	#GlobalStats.player_name = "me"
+	GlobalStats.load_game()
+	print(GlobalStats.player_name)
 
 	# Get references to player and marauder
 	player = $char  # Adjust this if the player node's name is different

@@ -96,18 +96,24 @@ func _process(delta):
 
 
 func make_sprite_visible_from_state(parent: Node, stance: String) -> void:
-	
-	# Hide all sprites first (optional)
+	# Hide all sprites and disable all collision polygons first
 	for child in parent.get_children():
 		if child.has_method("set_visible"):
 			child.visible = false
+		
+		# Disable collision polygons
+		if child is CollisionPolygon2D:
+			child.disabled = true
 	
 	# Make the selected sprite visible
 	var sprite = parent.get_node(stance)
 	sprite.visible = true
-	# Make it's collision polygon visible
+	
+	# Enable the associated collision polygon
 	var colliding_shape = parent.get_node(stance + "Collision")
-	colliding_shape.visible = true
+	if colliding_shape is CollisionPolygon2D:
+		colliding_shape.disabled = false
+
 
 func shoot_projectile(new_state: Dictionary) -> void:
 	# Instantiate the object
